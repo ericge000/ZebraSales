@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Sends user to login page
+LOGIN_URL = '/login/'
+
+# Sends user to the front page if logged in
+LOGIN_REDIRECT_URL = '/'
+
+# Sends user to the front if logged out
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -39,7 +47,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # Additional apps created by me
+    "conversation",
     "core",
+    "dashboard",
     "item",
 ]
 
